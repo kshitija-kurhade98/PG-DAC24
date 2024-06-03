@@ -1,0 +1,126 @@
+create table dept_audit(
+deptno int,
+olddname varchar(20),
+newdname varchar(20),
+oldloc varchar(20),
+newloc varchar(20)
+);
+
+delimiter ##
+
+create trigger insertdept1 after insert on deptCopy
+for each row
+	insert into dept_audit values
+	(new.deptno,null,new.dname,null,new.loc)##
+
+
+
+
+delimiter //
+create procedure insertemp(did int,pname varchar(20),loc varchar(20))
+begin 
+declare continue handler for SQLEXCEPTION
+select "error occured";
+insert into dept values(did,pname,loc);
+select did,pname,loc,'duplicate value not inserted';
+end//
+delimiter ;
+
+
+delimiter //
+create procedure updatejob(eid int,ejob varchar(20))
+begin
+declare exit handler for SQLEXCEPTION
+select 'error occured';
+update emp *
+set job = ejob
+where empno = eid;
+end//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+drop procedure insertemp;
+delimiter //
+create procedure insertemp(did int,pname varchar(20),loc varchar(20))
+begin 
+declare exit handler for SQLEXCEPTION
+select "error occured";
+insert into dept values(did,pname,loc);
+select did,pname,loc,'duplicate value not inserted';
+end//
+delimiter ;
+
+
+
+
+
+delimiter //
+create procedure insertdept1(pid int,name varchar(10),loc varchar(4))
+begin 
+declare continue handler for 3819 select 'id can not be negative';
+declare continue handler for 1136 select 'id can not be duplicate';
+declare continue handler for 1406 select 'too long name or location';
+declare continue handler for 1048 select 'id cant be negetive';
+
+declare continue handler for SQLEXCEPTION
+select "error occured";
+insert into dept values(pid,name,loc);
+select pid,name,loc,'duplicate value not inserted';
+end//
+delimiter ;
+
+
+mysql> call insertdept(10,'jsjw','hjeduye');
+ERROR 1406 (22001): Data too long for column 'loc' at row 1
+mysql> call insertdept(10,'jsjw','hjee');
++---------------+
+| error occured |
++---------------+
+| error occured |
++---------------+
+1 row in set (0.00 sec)
+
++------+------+------+------------------------------+
+| pid  | name | loc  | duplicate value not inserted |
++------+------+------+------------------------------+
+|   10 | jsjw | hjee | duplicate value not inserted |
++------+------+------+------------------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select * from dept;
++--------+------------+----------+
+| DEPTNO | DNAME      | LOC      |
++--------+------------+----------+
+|     -2 | hjkjhfd    | jhdewdwq |
+|     -1 | hjkjhfd    | jhdewdwq |
+|      1 | jdijeugh   | ghee     |
+|     10 | ACCOUNTING | NEW YORK |
+|     20 | RESEARCH   | DALLAS   |
+|     30 | SALES      | CHICAGO  |
+|     40 | OPERATIONS | BOSTON   |
+|     70 | kk         | oiuu     |
++--------+------------+----------+
+8 rows in set (0.00 sec)
+
+mysql> call insertdept(90,'jsjw','hjee');
++------+------+------+------------------------------+
+| pid  | name | loc  | duplicate value not inserted |
++------+------+------+------------------------------+
+|   90 | jsjw | hjee | duplicate value not inserted |
++------+------+------+------------------------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.02 sec)
