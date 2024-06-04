@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Usage Survey</title>
+    <!-- <style>
+        td {
+        border-spacing: 1cm;
+            }
+    </style> -->
+</head>
+<body>
+    <table 
+        style="border-collapse:separate;
+        border-spacing:50px 20px; border: 1px solid blue;">
+        <form>
+        <tr><th style="text-align: left; font-size: 24px; font-family: 'Times New Roman';">
+            <b>Internet Usage Survey</b>
+        </th></tr>
+       
+        <tr><td>This survey is being .......</td></tr><br><br>
+        
+        <tr>
+            <td>What type of internet connection do you have? (select one)</td>
+            <td style="border-spacing: 1cm;">
+                <select multiple>
+                    <option value="dial-up">Dial-up</option>
+                    <option value="dsl">DSL</option>
+                    <option value="hsc">High Speed Cable</option>
+                    <option value="other">Other</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>What type of computer do you use most at house?</td>
+            <td>
+                <input type="radio" name="device" value="desktop">Desktop
+                <input type="radio" name="device" value="laptop">Laptop
+            </td>
+        </tr>
+
+        <tr>
+            <td>How would you describe your main reason for using the Internet?</td>
+            <td><input type="radio" name="activity">To do work related activities<br>
+            <input type="radio" name="activity">To do school related activities<br>
+            <input type="radio" name="activity">For entertainment purpose<br>
+            <input type="radio" name="activity">Other Activities</td>
+        </tr>
+
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Type of sites visited</legend>
+                    </br>
+                    What type of websites do you access most often?<br>
+                    Check all that apply.<br><br>
+                    <input type="checkbox">SelfImprovement<br>
+                    <input type="checkbox">Entertainment<br>
+                    <input type="checkbox">News and Sports<br>
+                    <input type="checkbox">Reference<br>
+                    <input type="checkbox">Email<br>
+                </fieldset>
+            </td>
+            <td>
+                <fieldset>
+                    <legend>Time Spent using Internet</legend>
+                </br>
+                    During an average week; how log do you spend online?</br><br>
+                    <input type="radio" name="time">0-3 hrs<br>
+                    <input type="radio" name="time">4-6 hrs<br>
+                    <input type="radio" name="time">7-10 hrs<br>
+                    <input type="radio" name="time">11-14 hrs<br>
+                    <input type="radio" name="time">15+ hrs<br>
+                </fieldset>
+            </td>
+        </tr>
+
+        <br><br><br>
+        <tr>
+            <td>Please comment on your opinions concerning Internet privacy and safety:</td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><textarea cols="90" rows="4"></textarea></td>
+        </tr>
+
+        <tr>
+            <td> FirstName : <input type="text"></td>
+            <td>LastName : <input type="text"></td>  
+        </tr>
+
+        <tr>
+            <td> Age : <input type="text" aria-rowcount="10"></td>
+            <td>ZipCode : <input type="text"></td>  
+        </tr>
+
+        <tr>
+        <td> 
+            <input type="submit" name="submit">
+            <input type="reset" name="reset"> 
+        </td>
+        </tr>
+        </form>
+    </table>
+</body>
+</html>

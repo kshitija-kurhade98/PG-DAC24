@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        /* class selector */
+        .col1 {
+            background: plum;
+        }
+
+        /* ID selector */
+        #col2 {
+            background-color: pink;
+        }
+
+        /* tag selector */
+        textarea {
+        display: block;
+        border: 1px solid #000;
+        /*position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;*/
+        height: 100%;
+        resize: vertical;
+        min-width: 100px;
+        min-height: 50px;
+       }
+    </style>
+</head>
+<body>
+    <table border="1" cellpadding="10" cellspacing="0" >
+        <tr>
+            <td class="col1">Name</td>
+            <td id="col2"><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td class="col1">Employee Code</td>
+            <td id="col2"><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td class="col1">Department</td>
+            <td id="col2">
+                <input type="radio" name="dept" id="admin"><label for="admin">Admin</label><br>
+                <input type="radio" name="dept" id="hr"><label for="hr">HR</label><br>
+                <input type="radio" name="dept" id="technical"><label for="technical">Technical</label><br>
+                <input type="radio" name="dept" id="accounts"><label for="accounts">Accounts</label><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="col1">Date of Joining</td>
+            <td id="col2"><input type="date"></td>
+        </tr>
+
+        <tr>
+            <td class="col1">Address</td>
+            <td id="col2"><textarea cols="40" rows="4"></textarea></td>
+        </tr>
+
+        <tr>
+            <td class="col1">Training Programs Attended</td>
+            <td id="col2">
+                <input type="checkbox" name="html" id="html"><label for="html">HTML/DHTML</label><br>
+                <input type="checkbox" name="java" id="java"><label for="java">Java</label><br>
+                <input type="checkbox" name="clienserver" id="clienserver"><label for="clienserver">Client/Server</label><br>
+                <input type="checkbox" name="net" id="net"><label for="net">.NET</label><br>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="col1">Training programs need to attend</td>
+            <td id="col2">
+                <select name="programs" multiple>
+                    <option value="javascript">JavaScript</option>
+                    <option value="jstruts">Jstruts</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="col1">send the information at</td>
+            <td id="col2"><label style="color: blue;"><u>empinfo@patnl.com</u></label></td>
+        </tr>
+
+       
+        </tr>
+    </table>
+</body>
+</html>

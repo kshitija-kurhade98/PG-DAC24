@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDAC HTML Assignments</title>
+    <style>
+      
+        body {
+        border: 0.01cm solid black;
+        }
+        .top {
+        width: 100%;
+        height:3cm;
+        border-bottom: 3px double black;
+        border:0.01cm solid black;
+        background-color: white;
+        }
+
+        h1 { 
+        text-align: center;
+        font-family:'Times New Roman', Times, serif;
+        }
+
+        .bottom {
+        bottom: 0;
+        background-color: red;
+        }
+
+        .left {
+        width: 20%;
+        height:15cm;
+        border:0.01cm solid black;
+        background-color: white;
+        margin-top: 0.1cm;
+       
+        }
+
+        .right {
+        width: 79.4%;
+        height:15cm;
+        border:0.01cm solid black;
+        background-color: white;
+        float : right;
+        margin-top: -15.05cm;
+        margin-left: 0.2cm;
+        }
+
+        a:link{
+            color: blue;
+            margin-left: 0.5cm;
+            font-size: large;
+
+        }
+
+        a:hover{
+            color: yellowgreen;
+        }
+
+        /* a:visited{
+            color: red;
+        } */
+
+
+        /* * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            padding: auto;
+        } */
+
+        /* .left, .right {
+            width: 50%;
+        } */
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="top">
+        <h1>CDAC HTML Assignments</h1>
+    </div>
+
+
+    <div class="left">
+        <h3 style=" margin-left: 0.5cm; font-size:x-large">Assignments</h3>
+        <a href="https://support.sophos.com/support/s/filesubmission?language=en_US"><u>Assignment 1</u></a><br>
+        <a href="https://support.sophos.com/support/s/filesubmission?language=en_US"><u>Assignment 2</u></a><br>
+        <a href="https://support.sophos.com/support/s/filesubmission?language=en_US"><u>Assignment 3</u></a><br>
+        <a href="https://support.sophos.com/support/s/filesubmission?language=en_US"><u>Assignment 4</u></a><br>
+        <a href="https://support.sophos.com/support/s/filesubmission?language=en_US"><u>Assignment 5</u></a><br>
+        <a href="https://support.sophos.com/support/s/filesubmission?language=en_US"><u>Assignment 6</u></a><br>
+    </div>
+
+    <div class="right">
+        <h3 style=" text-align: center; margin-top: 0.2cm; font-size:x-large">Employee Details</h3>
+        <center>
+        <table border="1" cellspacing="3" cellpadding="7">
+            <tr style="margin: 1cm;">
+                <td>1)</td>
+                <td>Employee Id</td>
+                <td><input type="text" placeholder="enter your id"></td>
+            </tr>
+
+            <tr>
+                <td>2)</td>
+                <td>Employee Name </td>
+                <td><input type="text" placeholder="enter your name"></td>
+            </tr>
+
+            <tr>
+                <td>3)</td>
+                <td>Department Name </td>
+                <td>
+                    <select>
+                        <option> Software Development </option>
+                        <option>UI/UX</option>
+                        <option>Data Admin</option>
+                        <option>Testing</option>
+                        <option>Technical Support</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>4)</td>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td>5)</td>
+                <td>Address</td>
+                <td><textarea cols="21" rows="3"></textarea></td>
+            </tr>
+
+            <tr>
+                <td>6)</td>
+                <td>Skills </td>
+                <td>
+                    <input type="checkbox" id="c"><label for="c">C</label><br>
+                    <input type="checkbox" id="c++"><label for="c++">C++</label>
+                    <input type="checkbox" id="java"><label for="java">Java</label><br>
+                    <input type="checkbox" id="net"><label for="net">.NET</label>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>7)</td>
+                <td>Email</td>
+                <td><input type="text" placeholder="enter your Email"></td>
+            </tr>
+
+            <tr>
+                <td>8)</td>
+                <td>Birthdate</td>
+                <td><input type="date"></td>
+            </tr>
+        </table>
+        </center>
+    </div>
+
+</body>
+</html>
