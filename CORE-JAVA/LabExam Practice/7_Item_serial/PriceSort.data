@@ -1,0 +1,5 @@
+Item [itemCode=I2, desc=Desc1, price=30.0, shipDate=2024-01-09]
+Item [itemCode=I9, desc=Desc4, price=230.25, shipDate=2024-05-25]
+Item [itemCode=I1, desc=Desc2, price=350.0, shipDate=2024-03-11]
+Item [itemCode=I5, desc=Desc3, price=400.7, shipDate=2023-11-29]
+Item [itemCode=I8, desc=Desc5, price=550.0, shipDate=2024-04-08]
