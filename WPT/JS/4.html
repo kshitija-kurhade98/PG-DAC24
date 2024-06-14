@@ -1,0 +1,56 @@
+<!-- Write a function that accepts two numbers and a operator like (+,-,*, /) from user and performs the
+appropriate operation indicated by the operator. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate(event) {
+            var id = event.target.id
+            var n1 = parseInt(document.getElementById("num1").value)
+            var n2 = parseInt(document.getElementById("num2").value)
+            //var res;
+            switch (id) {
+                case "add":
+                    var res = n1+n2
+                    break;
+                case "sub":
+                    var res = n1-n2
+                    break;
+                case "prod":
+                    var res = n1*n2
+                    break;
+                case "div":
+                    var res = n1/n2
+                    break;
+            }
+            document.getElementById("print").innerHTML=res
+        }
+    </script>
+</head>
+
+<body>
+    Number 1: <input type="text" name="num1" id="num1"><br><br>
+    Number 2: <input type="text" name="num1" id="num2"><br><br>
+    <button type="button" name="submit" id="add" value="add" onclick="calculate(event)">
+        <large>+</large>
+    </button>
+    <button type="button" name="submit" id="sub" value="sub" onclick="calculate(event)">
+        <large>-</large>
+    </button>
+    <button type="button" name="submit" id="prod" value="prod" onclick="calculate(event)">
+        <large>*</large>
+    </button>
+    <button type="button" name="submit" id="div" value="div" onclick="calculate(event)">
+        <large>/</large>
+    </button>
+
+    <div id="print"></div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!-- Write a function to list all even numbers less than or equal to the number n. Take the value of n as input
+from user. Use while loop -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        function show() {
+            var num = document.getElementById("num").value
+            var i = 1;
+            while (i <= num) {
+                if (i % 2 == 0) {
+                    var res = i;
+                    document.getElementById("print").innerHTML += res + "<br>";
+                }
+                i++;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    Number : <input type="number" name="num" id="num"><br><br>
+    <button type="submit" name="submit"  onclick="show()">Get list </button>
+    <div id="print"></div>
+</body>
+
+</html>

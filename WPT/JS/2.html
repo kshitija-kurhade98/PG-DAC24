@@ -1,0 +1,29 @@
+<!-- Accept an integer value and a message from user and print the message that many number oftimes. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            var cnt = document.getElementById("num").value
+            var counter=1;
+            var mytext = document.getElementById("msg").value
+            while(counter<=cnt){
+                document.getElementById("print").innerHTML+=mytext+"<br>";
+                counter++;
+            }
+        }
+    </script>
+</head>
+<body>
+    Count : <input type="number" name="num" id="num"><br><br>
+    Enter Msg : <input type="text" name="msg" id="msg"><br><br>
+    
+    <button type="submit" name="submit" value="" onclick="show()">Print</button>
+
+    <div id="print"></div>
+</body>
+</html>

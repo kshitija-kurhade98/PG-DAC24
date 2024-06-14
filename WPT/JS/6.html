@@ -1,0 +1,30 @@
+<!-- WAP to find Sum of Digits of given 5 digit number-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculateSum(){
+            var num = parseInt(document.getElementById("num").value)
+            var sum=0, rem;
+            while(num != 0){
+                rem = num % 10;
+                sum = sum + rem;
+                num = Math.floor(num/10);
+            }
+            //var res=Math.floor(sum)
+            document.getElementById("result").innerHTML=sum
+        }
+    </script>
+</head>
+<body>
+    <form>
+    Number :
+    <input type="text" name="num" id="num" min="2" max="5">
+    <button type="button" id="button" onclick="calculateSum()">Calc_Sum</button>
+    <div id="result"></div>
+    </form>
+</body>
+</html>

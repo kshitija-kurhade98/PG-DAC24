@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        fieldset {
+            border-radius: 1cm;
+            border-color: blue;
+            margin-left: 20px;
+            margin-right: 2px;
+            margin-bottom: 10px;
+            padding-top: 0.35em;
+            padding-bottom: 0.625em;
+            padding-left: 0.75em;
+            padding-right: 50px;
+            width: 600px;
+
+        }
+
+        legend {
+            border: 3cm;
+            border-color: blueviolet;
+            color: aliceblue;
+            background-color: blue;
+        }
+
+        body {
+            background-color: black;
+            color: aliceblue;
+        }
+
+        #btn {
+            background-color: blue;
+            color: aliceblue;
+        }
+
+        input {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Name and address</legend>
+
+        <table>
+            <form>
+                <tr>
+                    <td><label>SSN :</label></td>
+                    <td><input type="text"></td>
+                    <td>
+                        <small style=" color: aliceblue;
+                background-color: blue;">Fill in Name and Address</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Full Name :</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label>Street and Number :</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label>Postal Code :</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label>City :</label></td>
+                    <td><input type="text"></td>
+                </tr>
+            </form>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            UserName and Password
+        </legend>
+        <table>
+            <form>
+                <tr>
+                    <td><label>UserName :</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label>Password :</label></td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox">show password</td>
+                </tr>
+
+            </form>
+        </table>
+    </fieldset>
+    <br>
+    <div style="margin-left: 10px;">
+        <input type="submit" name="Register" value="Register" id="btn">
+    </div>
+
+</body>
+
+</html>
