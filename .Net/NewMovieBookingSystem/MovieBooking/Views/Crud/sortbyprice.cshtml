@@ -1,0 +1,13 @@
+﻿<h1>Sort By Price</h1>
+
+@{
+    <ol>
+    
+        @{
+            foreach(Movie movie in Model)
+            {
+                <li>@movie.price</li>
+            }
+        }
+    </ol>
+}

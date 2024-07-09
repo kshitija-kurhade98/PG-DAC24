@@ -1,0 +1,13 @@
+﻿<h2>All Movies</h2>
+
+@{
+    <ol>
+        @{
+            foreach (Movie movie in Model)
+            {
+                <li>Id : @movie.id |  Name : @movie.name |  Rating : @movie.rating | Price : @movie.price</li>
+                
+            }
+        }
+    </ol>
+}

@@ -1,0 +1,33 @@
+create database MovieBooking;
+
+use MovieBooking;
+
+create table movies(
+id int primary key,
+name varchar(20) not null,
+rating int,
+price int);
+
+
+create table admin(username varchar(10), password varchar(20));
+
+insert into admin values("admin", "admin123");
+___________________________________________________________________
+
+application creation flow :
+
+1. Blank sol
+2. new project : asp.net mvc
+3. add dependencies -> add package via nuget -> mysql.entityframework core
+4. Homecontroller : Index -> Login view page
+   crudController : Index -> navigation links
+4. Models : POCO
+5. repositories : 
+	Collection Context
+	interface , class
+6. services : interface, class
+7. controller : controllers
+8. views
+9. program.cs -> addScoped
+
+
