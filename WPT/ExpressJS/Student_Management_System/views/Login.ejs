@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateUser(id,errid){
+            var uname = document.getElementById(id).value;
+            if(uname=="admin"){
+                document.getElementById(errid).innerHTML="";
+                return true;
+            }else{
+                document.getElementById(errid).innerHTML="Wrong username!!";
+                return false;
+            }
+        }
+        function validatePass(id,errid){
+            var password = document.getElementById(id).value;
+            if(password=="admin123"){
+                document.getElementById(errid).innerHTML="";
+                return true;
+            }else{
+                document.getElementById(errid).innerHTML="Wrong password!!";
+                return false;
+            }
+        }
+        function validateLogin(){
+            var flag1 = validateUser("user","errUser");
+            var flag2 = validatePass("pass","errPass");
+            return flag1&&flag22;
+        }
+    </script>
+</head>
+<body>
+    <form action="login" method="get" onsubmit="return validateLogin()">
+
+    Username : <input type="text" name="user" id="user">
+    Password : <input type="text" name="pass" id="pass">
+    <input type="submit" value="Login" name="Login">
+    <span id="errUser"></span>
+    <span id="errPass"></span>
+    </form>
+</body>
+</html>
